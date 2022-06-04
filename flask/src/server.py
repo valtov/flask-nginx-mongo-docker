@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 
 AVATAR_LINK = "https://i.ibb.co/0nmJ0by/profile.jpg"
-MONGO_IP = "172.20.0.3"
+MONGO_IP = "mongo"
 MONGO_USER = "root"
 MONGO_PW = "example"
 MONGO_ROUTE = f"mongodb://{MONGO_USER}:{MONGO_PW}@{MONGO_IP}:27017/"
