@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<!-- <link rel="stylesheet" type="text/css" href="static/css/home.css">
+  <script src="static/js/home.js"></script> -->
+{% endblock %}
+
+{% block content %}
+<section class="container">
+    <form action="/guestbook_form" method="post" class="needs-validation" novalidate>
+        <div class="row py-lg-5">
+            <div class="mb-3">
+                <h1 class="text-center">Guestbook Form</h1>
+            </div>
+        </div>
+        <!-- <div class="text-center"> -->
+        <div id="guestbookName" class="mb-3">
+            <input class="form-control" type="text" name="name" placeholder="Name" required>
+        </div>
+        <div id="guestbookEmail" class="mb-3">
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
+            <!-- <small class="form-text text-danger">Please enter a correct email address.</small> -->
+        </div>
+        <div id="guestbookMessage" class="mb-3">
+            <textarea class="form-control" name="message" placeholder="Message" rows="3" required></textarea>
+        </div>
+        <div class="mb-3" style="color: var(--pink);">
+            <button id="guestbookSubmitButton" class="btn btn-primary" type="submit" onclick="window.location.href = '/welcome';">submit </button>
+        </div>
+    <!-- </div> -->
+    </form>
+</section>
+
+<section class="container" style="height: 1218px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for id, name, email, comment in guestbook %}
+            <tr>
+                <th scope="row">{{ id }}</th>
+                <td> {{ name }} </td>
+                <td> {{ email }} </td>
+                <td> {{ comment }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
