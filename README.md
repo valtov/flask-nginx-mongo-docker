@@ -4,11 +4,12 @@ Deploy a website with the above stack with one docker command. This contains jus
 
 ## Installation
 
-1. [Install Docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
-2. git clone https://github.com/valtov/flask-nginx-mongo-docker.git
-3. cd flask-nginx-mongo-docker
-4. docker-compose up -d
-5. Navigate to localhost
+1. [Install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+2. [Install docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04)
+3. git clone https://github.com/valtov/flask-nginx-mongo-docker.git
+4. cd flask-nginx-mongo-docker
+5. docker-compose up -d
+6. Navigate to localhost
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
